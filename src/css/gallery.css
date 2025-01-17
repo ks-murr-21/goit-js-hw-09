@@ -1,27 +1,40 @@
-.gallery {
+@import 'simplelightbox/dist/simple-lightbox.min.css';
+* {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
   margin: 0;
-  margin-bottom: 30px;
-  padding: 20px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  border: 2px solid #21212150;
-  border-radius: 10px;
+  padding-left: 0;
+  list-style-type: none;
 }
-.gallery-item {
-  width: calc((100% - 24px * 2) / 3);
-  overflow: hidden;
-  border-radius: 10px;
-  transition: 250ms ease-in-out;
-}
-.gallery-item:hover,
-.gallery-item:focus {
-  scale: 1.05;
+
+button {
   cursor: pointer;
 }
-.gallery-link {
+
+img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1440px;
+  padding: 24px 156px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+  flex-grow: 1;
 }
